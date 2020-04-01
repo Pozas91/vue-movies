@@ -8,9 +8,8 @@ script: npm run build
 
 deploy:
   provider: pages
-  cleanup: true
+  cleanup: false
   token: $GITHUB_TOKEN
   local_dir: dist
-  strategy: git
   on:
     branch: master

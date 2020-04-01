@@ -84,7 +84,9 @@ export default {
 
           router.replace('/movies')
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+          console.log(error)
+        })
     },
     tryAutoLogin ({ commit, dispatch }) {
       const token = localStorage.getItem('token')

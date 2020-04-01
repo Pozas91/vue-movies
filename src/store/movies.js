@@ -29,7 +29,9 @@ export default {
 
           commit('SET_MOVIES', movies)
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+          console.error(error)
+        })
     },
     createMovie: ({ commit, dispatch, rootState }, movieData) => {
       axios.post('movies.json' + '?auth=' + rootState.auth.idToken, {
@@ -40,14 +42,18 @@ export default {
           dispatch('initMovies')
           router.replace('/movies')
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+          console.error(error)
+        })
     },
     deleteMovie: ({ commit, dispatch, rootState }, movieData) => {
       axios.delete('movies/' + movieData.id + '.json?auth=' + rootState.auth.idToken)
         .then(response => {
           dispatch('initMovies')
         })
-        .catch(error => console.error(error))
+        .catch(error => {
+          console.error(error)
+        })
     }
   },
   mutations: {

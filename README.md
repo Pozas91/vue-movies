@@ -1,4 +1,4 @@
-# vue-crossfit
+# vue-movies
 
 ## Project setup
 ```

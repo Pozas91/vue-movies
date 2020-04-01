@@ -85,7 +85,7 @@ export default {
           router.replace('/movies')
         })
         .catch(error => {
-          // console.log(error)
+          dispatch('errors/showError', 'Cannot register at moment, please try again later.', { root: true })
         })
     },
     tryAutoLogin ({ commit, dispatch }) {

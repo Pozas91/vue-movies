@@ -30,7 +30,7 @@ export default {
           commit('SET_MOVIES', movies)
         })
         .catch(error => {
-          console.error(error)
+          // console.error(error)
         })
     },
     createMovie: ({ commit, dispatch, rootState }, movieData) => {
@@ -43,7 +43,7 @@ export default {
           router.replace('/movies')
         })
         .catch(error => {
-          console.error(error)
+          // console.error(error)
         })
     },
     deleteMovie: ({ commit, dispatch, rootState }, movieData) => {
@@ -52,7 +52,7 @@ export default {
           dispatch('initMovies')
         })
         .catch(error => {
-          console.error(error)
+          // console.error(error)
         })
     }
   },

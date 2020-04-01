@@ -85,7 +85,7 @@ export default {
           router.replace('/movies')
         })
         .catch(error => {
-          console.log(error)
+          // console.log(error)
         })
     },
     tryAutoLogin ({ commit, dispatch }) {

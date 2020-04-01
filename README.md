@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+[![Build Status](https://travis-ci.com/Pozas91/vue-movies.svg?branch=master)](https://travis-ci.com/Pozas91/vue-movies)

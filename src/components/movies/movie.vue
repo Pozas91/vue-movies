@@ -20,7 +20,7 @@ export default {
   methods: {
     deleteMovie () {
       this.$swal.fire({
-        text: 'Already watch it?',
+        text: 'Have you already seen the movie?',
         icon: 'info',
         showCancelButton: true
       }).then((result) => {

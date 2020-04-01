@@ -7,7 +7,7 @@ export default {
     movies: []
   },
   actions: {
-    initMovies: ({ commit, state, rootState }) => {
+    initMovies: ({ commit, state, rootState, dispatch }) => {
       if (!rootState.auth.idToken) {
         return
       }
@@ -29,7 +29,7 @@ export default {
 
           commit('SET_MOVIES', movies)
         })
-        .catch(error => {
+        .catch(() => {
           dispatch('errors/showError', 'Cannot get movies', { root: true })
         })
     },
@@ -42,7 +42,7 @@ export default {
           dispatch('initMovies')
           router.replace('/movies')
         })
-        .catch(error => {
+        .catch(() => {
           dispatch('errors/showError', 'Cannot create the movie', { root: true })
         })
     },
@@ -51,7 +51,7 @@ export default {
         .then(response => {
           dispatch('initMovies')
         })
-        .catch(error => {
+        .catch(() => {
           dispatch('errors/showError', 'Cannot delete the movie', { root: true })
         })
     }

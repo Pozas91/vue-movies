@@ -84,7 +84,7 @@ export default {
 
           router.replace('/movies')
         })
-        .catch(error => {
+        .catch(() => {
           dispatch('errors/showError', 'Cannot register at moment, please try again later.', { root: true })
         })
     },

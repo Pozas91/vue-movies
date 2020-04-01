@@ -8,13 +8,22 @@
     <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav ml-auto">
         <router-link to="/register" active-class="active" tag="li" class="nav-item" v-if="!auth">
-          <a class="nav-link">Register</a>
+          <a class="nav-link">
+            Register
+            <font-awesome-icon icon="user-plus" />
+          </a>
         </router-link>
         <router-link to="/login" active-class="active" tag="li" class="nav-item" v-if="!auth">
-          <a class="nav-link">Login</a>
+          <a class="nav-link">
+            Login
+            <font-awesome-icon icon="sign-in-alt" />
+          </a>
         </router-link>
         <li class="nav-item" v-if="auth">
-          <button class="btn btn-outline-danger" type="submit" @click="onLogout">Logout</button>
+          <button class="btn btn-outline-danger" type="submit" @click="onLogout">
+            Logout
+            <font-awesome-icon icon="power-off" />
+          </button>
         </li>
       </ul>
     </div>

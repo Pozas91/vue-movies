@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store'
+import Index from '../views/Movies/Index'
+import Login from '../views/Login'
+import Register from '../views/Register'
+import Create from '../views/Movies/Create'
+import Error404 from '../views/Error404'
 
 Vue.use(VueRouter)
 
@@ -8,7 +13,7 @@ const routes = [
   {
     path: '/movies',
     name: 'Movies',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Movies/Index.vue'),
+    component: Index,
     beforeEnter (to, from, next) {
       if (store.state.auth.idToken) {
         next()
@@ -20,7 +25,7 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+    component: Login
   },
   {
     path: '/register',
@@ -28,12 +33,16 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue')
+    component: Register
   },
   {
     path: '/movies/create',
     name: 'CreateMovie',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Movies/Create.vue')
+    component: Create
+  },
+  {
+    path: '*',
+    component: Error404
   }
 ]
 

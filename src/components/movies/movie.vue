@@ -1,8 +1,13 @@
 <template>
-  <div class="col-3">
-    <div class="card" @click="deleteMovie">
+  <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+    <div class="card">
       <div class="card-body">
         <h5 class="text-center">{{movie.title}}</h5>
+      </div>
+      <div class="card-footer text-center">
+        <button type="button" @click="deleteMovie" class="btn btn-danger">
+          <font-awesome-icon icon="trash" />
+        </button>
       </div>
     </div>
   </div>

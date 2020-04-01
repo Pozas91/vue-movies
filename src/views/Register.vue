@@ -49,7 +49,10 @@
               You must agree before submitting
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" :disabled="$v.$invalid">Register</button>
+          <button type="submit" class="btn btn-primary" :disabled="$v.$invalid">
+            Register
+            <font-awesome-icon icon="user-plus" />
+          </button>
         </form>
       </div>
     </div>

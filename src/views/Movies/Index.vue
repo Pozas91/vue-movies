@@ -11,7 +11,10 @@
     </div>
 
     <div class="col-6 offset-3 mt-3">
-      <router-link to="/movies/create" class="btn btn-success btn-block">Add movie</router-link>
+      <router-link to="/movies/create" class="btn btn-success btn-block">
+        Add movie
+        <font-awesome-icon icon="plus" />
+      </router-link>
     </div>
 
   </div>

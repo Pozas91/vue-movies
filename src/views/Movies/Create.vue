@@ -15,7 +15,10 @@
               Title must be required and at least {{$v.title.$params.minLen.min}} characters.
             </div>
           </div>
-          <button type="submit" class="btn btn-success" :disabled="$v.$invalid">Add</button>
+          <button type="submit" class="btn btn-success" :disabled="$v.$invalid">
+            Add
+            <font-awesome-icon icon="plus" />
+          </button>
         </form>
       </div>
     </div>
@@ -35,7 +38,7 @@ export default {
   validations: {
     title: {
       required,
-      minLen: minLength(6)
+      minLen: minLength(3)
     }
   },
   methods: {

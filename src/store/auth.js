@@ -92,7 +92,6 @@ export default {
       const token = localStorage.getItem('token')
 
       if (!token) {
-        dispatch('logout')
         return
       }
 

@@ -23,7 +23,10 @@
               Password must be have at least {{$v.password.$params.minLen.min}} characters length.
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" :disabled="$v.$invalid">Log In</button>
+          <button type="submit" class="btn btn-primary" :disabled="$v.$invalid">
+            Log In
+            <font-awesome-icon icon="sign-in-alt"/>
+          </button>
         </form>
       </div>
     </div>

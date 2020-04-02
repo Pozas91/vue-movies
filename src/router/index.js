@@ -11,6 +11,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '',
+    name: 'Home',
+    redirect: '/movies'
+  },
+  {
     path: '/movies',
     name: 'Movies',
     component: Index,
